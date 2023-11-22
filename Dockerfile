@@ -10,8 +10,8 @@ RUN apt-get update && \
 # 设置 root 用户的密码为 'root'
 RUN echo 'root:asher123456' | chpasswd
 
-# 暴露 22 端口
-EXPOSE 22
+# 暴露 22 等端口
+EXPOSE 20 21 22 80 443 888 8888 3306 39000-40000
 
 # 启动 Shellinabox
 CMD ["/usr/bin/shellinaboxd", "-t", "-s", "/:LOGIN"]
